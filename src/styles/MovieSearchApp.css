@@ -1,0 +1,98 @@
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url("./../assets/fonts/Roboto-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("./../assets/fonts/Roboto-Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.title-page {
+  align-self: center;
+  font-family: "Roboto-Bold";
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px 0 40px 0 !important;
+}
+
+.form-control {
+  width: 60%;
+  margin: 20px 0 20px 0;
+  box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.185);
+  background-color: #e5e3fe;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  width: 30%;
+  height: auto;
+  margin: 15px;
+  border: none;
+  box-shadow: 6px 6px 16px 14px rgba(0, 0, 0, 0.185);
+  font-size: 80%;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.custom-title {
+  font-size: 150%;
+}
+
+.custom-text {
+  font-size: 90%;
+}
+
+.btn {
+  background-color: #6b5dff;
+  border: none;
+  transition: background-color 0.5s ease;
+  font-family: "Roboto-Bold";
+}
+
+.btn:hover {
+  background-color: #6b5dff96;
+  border: none;
+}
+
+.custom-confirm-button {
+  background-color: #6b5dff;
+  border-radius: 0.375rem;
+  transition: background-color 0.5s ease;
+  font-family: "Roboto-Bold";
+}
+
+.custom-confirm-button:hover {
+  background-color: #6b5dff96;
+  border-radius: 0.375rem;
+}

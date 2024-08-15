@@ -1,0 +1,39 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #00203c;
+  padding-top: 5%;
+  color: #cdcafb;
+  font-weight: bold;
+}
+
+.content {
+  flex: 1;
+}
+
+.footer {
+  padding: 20px;
+  font-size: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto-Bold";
+  background-color: #001a30;
+  height: 200px;
+  margin-top: 50px;
+}
+
+.footer-p {
+  margin: 0;
+}
+
+.logo-footer {
+  width: 30px;
+  height: 30px;
+  margin: 10px;
+}
+
+.swal2-popup {
+  background-color: #e5e3fe;
+}
