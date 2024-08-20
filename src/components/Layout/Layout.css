@@ -13,15 +13,15 @@
 }
 
 .footer {
-  padding: 20px;
-  font-size: 70%;
+  padding: 3%;
+  font-size: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: "Roboto-Bold";
   background-color: #001a30;
-  height: 200px;
-  margin-top: 50px;
+  height: 20%;
+  margin-top: 5%;
 }
 
 .footer-p {
@@ -36,4 +36,46 @@
 
 .swal2-popup {
   background-color: #e5e3fe;
+}
+
+/* Pantallas Medianas (Tablets) */
+@media (min-width: 577px) {
+  .footer {
+    padding: 5%;
+    font-size: 80%;
+  }
+
+  .logo-footer {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Pantallas Grandes (Laptops y Escritorios) */
+@media (min-width: 769px) {
+  .logo-footer {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+/* Pantallas Muy Grandes (Monitores) */
+@media (min-width: 993px) {
+  .footer {
+    padding: 5%;
+    font-size: 100%;
+  }
+
+  .logo-footer {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+/* Monitores ultra anchos */
+@media (min-width: 1600px) {
+  .logo-footer {
+    width: 50px;
+    height: 50px;
+  }
 }
