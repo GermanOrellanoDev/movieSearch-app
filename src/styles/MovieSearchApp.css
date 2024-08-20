@@ -44,6 +44,12 @@ body {
   margin: 20px 0 20px 0;
   box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.185);
   background-color: #e5e3fe;
+  font-size: 80%;
+  text-align: center;
+}
+
+.d-flex {
+  margin: 20px 0 20px 0;
 }
 
 .card-container {
@@ -130,8 +136,4 @@ body {
   .card {
     width: 25%;
   }
-}
-
-/* Monitores ultra anchos */
-@media (min-width: 1600px) {
 }
