@@ -7,21 +7,22 @@ export const MovieSearchApp = () => {
 
   const [movieSearch, setMovieSearch] = useState("");
   const [movie, setMovie] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   const handleImputChange = (e) => {
     setMovieSearch(e.target.value);
   };
 
   const fetchMovies = async () => {
+    setLoading(true);
     try {
       const response = await fetch(
         `${url}?query=${movieSearch}&api_key=${apiKey}`
       );
       const data = await response.json();
-      console.log(data);
 
       if (Array.isArray(data.results) && data.results.length > 0) {
-        setMovie(data.results);
+        setMovie(data.results || []);
       } else {
         Swal.fire({
           icon: "error",
@@ -46,6 +47,8 @@ export const MovieSearchApp = () => {
           confirmButton: "custom-confirm-button",
         },
       });
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -73,20 +76,28 @@ export const MovieSearchApp = () => {
         </button>
       </form>
 
-      <div className="card-container">
-        {movie.map((each) => (
-          <div key={each.id} className="card">
-            <img
-              src={`https://image.tmdb.org/t/p/w500/${each.poster_path}`}
-              className="card-img-top"
-              alt={each.title}
-            />
-            <div className="card-body">
-              <p className="card-text">{each.overview}</p>
-            </div>
+      {loading ? (
+        <div className="d-flex justify-content-center spinner">
+          <div className="spinner-border" role="status">
+            <span className="visually-hidden">Loading...</span>
           </div>
-        ))}
-      </div>
+        </div>
+      ) : (
+        <div className="card-container">
+          {movie.map((each) => (
+            <div key={each.id} className="card">
+              <img
+                src={`https://image.tmdb.org/t/p/w500/${each.poster_path}`}
+                className="card-img-top"
+                alt={each.title}
+              />
+              <div className="card-body">
+                <p className="card-text">{each.overview}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 };

@@ -13,25 +13,24 @@
 }
 
 .footer {
-  padding: 3%;
-  font-size: 50%;
+  padding: 10% 0 10% 0;
+  font-size: 60%;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: "Roboto-Bold";
   background-color: #001a30;
-  height: 20%;
+  height: 30%;
   margin-top: 5%;
 }
 
 .footer-p {
-  margin: 0;
+  margin: 10px 10px 10px 0;
 }
 
 .logo-footer {
   width: 30px;
   height: 30px;
-  margin: 10px;
 }
 
 .swal2-popup {
