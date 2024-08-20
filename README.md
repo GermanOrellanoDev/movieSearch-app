@@ -9,3 +9,4 @@ Aplicar los conocimientos adquiridos, por ejemplo:
 - Agregar algunos componentes de Bootstrap
 - Diseño responsive
 - Hacer deploy de la app en Vercel
+
